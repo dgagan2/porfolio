@@ -1,0 +1,103 @@
+.container-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    height: 600px;
+}
+
+.container-profile::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("../assets/fondo.jpg") center/cover fixed no-repeat;
+    filter: opacity(0.1);
+    z-index: -1;
+}
+
+.profile-image,
+.container-profile-image {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    object-fit: contain;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0px 0px 14px black);
+}
+
+.container-social-icons {
+    display: flex;
+}
+
+.container-social-icons a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon__github,
+.social-icon__linkedin {
+    width: 35px;
+    height: 35px;
+    filter: invert(1);
+}
+
+.social-icon__linkedin-hover,
+.social-icon__github-hover {
+    display: none;
+}
+
+.social-icon__link:hover .social-icon__github,
+.social-icon__link:hover .social-icon__linkedin {
+    display: none;
+}
+
+.social-icon__link:hover .social-icon__github-hover,
+.social-icon__link:hover .social-icon__linkedin-hover {
+    display: block;
+    width: 35px;
+    height: 35px;
+    transform: scale(1.0);
+    filter: drop-shadow(0px 0px 10px white);
+}
+
+
+
+.container-profile-motions {
+    position: relative;
+    width: 270px;
+    height: 270px
+}
+
+.container-profile h1 {
+    margin: 20px 20px 0px 20px;
+    font-family: "Cabin Sketch", sans-serif;
+    font-style: italic;
+    line-height: 28px;
+}
+
+@media screen and (min-width: 500px) {
+
+    .profile-image,
+    .container-profile-image {
+        width: 290px;
+        height: 290px;
+
+    }
+
+    .container-profile-motions {
+        width: 305px;
+        height: 305px
+    }
+}
