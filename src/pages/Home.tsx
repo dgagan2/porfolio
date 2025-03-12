@@ -32,11 +32,11 @@ const Home = () => {
                 <h1>Full Stack Developer <br /> JavaScript</h1>
 
                 <section className='container-social-icons'>
-                    <a href="" target='blank' className="social-icon__link github">
+                    <a href="https://github.com/dgagan2" target='blank' className="social-icon__link github">
                         <img src={gitHubIcon} alt="icono github" className='social-icon__github' />
                         <img src={imageHover} alt="icono de flecha" className='social-icon__github-hover' />
                     </a>
-                    <a href="" target='blank' className="social-icon__link linkedin">
+                    <a href="https://www.linkedin.com/in/deibi-arias-58396a224/" target='blank' className="social-icon__link linkedin">
                         <img src={linkedinIcon} alt="icono linkedin" className='social-icon__linkedin' />
                         <img src={imageHover} alt="icono de flecha" className='social-icon__linkedin-hover' />
                     </a>
