@@ -2,7 +2,6 @@ import profile from '../assets/1.png'
 import gitHubIcon from '../assets/icons/github.png'
 import linkedinIcon from '../assets/icons/linkedin.png'
 import imageHover from "../assets/icons/clic.png"
-
 import "../css/home.css"
 import { motion } from 'framer-motion'
 import DockNavbar from '../components/navbar/DockNavbar'
@@ -14,9 +13,7 @@ const Home = () => {
             <header className='container-profile'>
                 <div className='container-profile-motions'>
                     <motion.div className='container-profile-image'>
-
                         <img src={profile} alt="foto de perfil" className='profile-image' />
-
                     </motion.div>
 
                     <motion.svg fill="transparent" viewBox="0 0 506 506">
@@ -30,7 +27,7 @@ const Home = () => {
 
                 <h2>Deibi Arias</h2>
                 <h1>Full Stack Developer <br /> JavaScript</h1>
-
+                <h4>Ingeniero en Sistemas, interés en Front-end Developer</h4>
                 <section className='container-social-icons'>
                     <a href="https://github.com/dgagan2" target='blank' className="social-icon__link github">
                         <img src={gitHubIcon} alt="icono github" className='social-icon__github' />
@@ -44,6 +41,26 @@ const Home = () => {
 
 
             </header>
+
+            <main className='container-main'>
+                <section className="container-proyectos">
+                    <h2>Proyectos</h2>
+                    <div className="proyectos">
+                        <div className="proyecto">
+                            <h3>Proyecto 1</h3>
+                            <p>Descripción del proyecto 1</p>
+                        </div>
+                        <div className="proyecto">
+                            <h3>Proyecto 2</h3>
+                            <p>Descripción del proyecto 2</p>
+                        </div>
+                        <div className="proyecto">
+                            <h3>Proyecto 3</h3>
+                            <p>Descripción del proyecto 3</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
 
             <DockNavbar />
         </>
