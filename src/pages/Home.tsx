@@ -1,10 +1,12 @@
 import profile from '../assets/1.png'
 import gitHubIcon from '../assets/icons/github.png'
 import linkedinIcon from '../assets/icons/linkedin.png'
-import imageHover from "../assets/icons/clic.png"
-import "../css/home.css"
-import { motion } from 'framer-motion'
+
 import DockNavbar from '../components/navbar/DockNavbar'
+import { motion } from 'framer-motion'
+import "../css/home.css"
+import IconoFlecha from '../components/iconoFlecha/IconoFlecha'
+import CardProyectos from '../components/cardProyectos/cardProyectos'
 
 const Home = () => {
     return (
@@ -31,11 +33,11 @@ const Home = () => {
                 <section className='container-social-icons'>
                     <a href="https://github.com/dgagan2" target='blank' className="social-icon__link github">
                         <img src={gitHubIcon} alt="icono github" className='social-icon__github' />
-                        <img src={imageHover} alt="icono de flecha" className='social-icon__github-hover' />
+                        <IconoFlecha />
                     </a>
                     <a href="https://www.linkedin.com/in/deibi-arias-58396a224/" target='blank' className="social-icon__link linkedin">
                         <img src={linkedinIcon} alt="icono linkedin" className='social-icon__linkedin' />
-                        <img src={imageHover} alt="icono de flecha" className='social-icon__linkedin-hover' />
+                        <IconoFlecha />
                     </a>
                 </section>
 
@@ -43,26 +45,18 @@ const Home = () => {
             </header>
 
             <main className='container-main'>
-                <section className="container-proyectos">
+                <section className="container-proyectos" id='proyectos'>
                     <h2>Proyectos</h2>
-                    <div className="proyectos">
-                        <div className="proyecto">
-                            <h3>Proyecto 1</h3>
-                            <p>Descripción del proyecto 1</p>
-                        </div>
-                        <div className="proyecto">
-                            <h3>Proyecto 2</h3>
-                            <p>Descripción del proyecto 2</p>
-                        </div>
-                        <div className="proyecto">
-                            <h3>Proyecto 3</h3>
-                            <p>Descripción del proyecto 3</p>
-                        </div>
-                    </div>
+                    <section style={{ display: 'flex', justifyContent: 'center', gap: 40 }} className='container-proyectos-items'>
+
+
+                        <CardProyectos />
+
+                    </section>
                 </section>
             </main>
-
             <DockNavbar />
+
         </>
     )
 }

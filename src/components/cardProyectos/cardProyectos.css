@@ -1,0 +1,86 @@
+.proyectos {
+    display: flex;
+    position: relative;
+    width: 100%;
+    min-height: 240px;
+    margin-bottom: 10px;
+    list-style: none;
+    color: white;
+    box-shadow: black 0px 0px 10px;
+    border-radius: 10px;
+}
+
+.container-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+.image-project {
+    min-width: 150px;
+    max-width: 490px;
+    object-fit: cover;
+    position: relative;
+    border-radius: 10px;
+    z-index: 1;
+    opacity: 0.6;
+    mask-image: linear-gradient(to left, black 50%, transparent 100%);
+}
+
+.container-icons img {
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+}
+
+
+.texto-proyecto h4 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.texto-proyecto {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    font-size: 1.1rem;
+    background-color: rgba(0, 0, 0, 0.442);
+    min-width: 240px;
+    height: 100%;
+    max-width: 400px;
+    padding: 10px 50px;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+
+
+.proyectos:hover .texto-proyecto {
+    display: none;
+}
+
+
+.proyectos:hover .icono-flecha-hover {
+    display: block;
+    position: absolute;
+    z-index: 3;
+}
+
+@media screen and (min-width:380px) {
+    .texto-proyecto {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 560px) {
+
+    .texto-proyecto {
+        padding: 15px 50px;
+    }
+
+}
