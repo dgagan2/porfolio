@@ -6,6 +6,7 @@ import jwtIcon from "../../assets/icons/jwt.svg"
 import nodeIcon from "../../assets/icons/node.svg"
 import ouraMovie from "../../assets/projects/oura_movie.png"
 import electroDiesel from "../../assets/projects/Captura de pantalla 2025-03-15 180523.png"
+import ecommerce from "../../assets/projects/ecommerce.png"
 import IconoFlecha from "../iconoFlecha/IconoFlecha"
 import boostrapIcon from "../../assets/icons/bootstrap.svg"
 import "./cardProyectos.css"
@@ -50,6 +51,24 @@ const CardProyectos = () => {
                 <IconoFlecha />
 
                 <img src={electroDiesel} className='image-project'></img>
+
+            </a>
+
+            <a target='blank' href='https://fak-ecommerce.netlify.app/' className="proyectos" aria-label='e-commerce'>
+                <div className='container-icons'>
+                    <img src={reactIcon} alt="" />
+                    <img src={boostrapIcon} alt="" />
+                    <img src={cssIcon} alt="" />
+                    <img src={jwtIcon} alt="" />
+
+                </div>
+                <div className='texto-proyecto'>
+                    <h4>E-commerce</h4>
+                    <p>Tienda fake de ecommerce </p>
+                </div>
+                <IconoFlecha />
+
+                <img src={ecommerce} className='image-project'></img>
 
             </a>
 
