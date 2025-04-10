@@ -1,12 +1,13 @@
 import profile from '../assets/1.png'
 import gitHubIcon from '../assets/icons/github.png'
 import linkedinIcon from '../assets/icons/linkedin.png'
-
 import DockNavbar from '../components/navbar/DockNavbar'
 import { motion } from 'framer-motion'
 import "../css/home.css"
 import IconoFlecha from '../components/iconoFlecha/IconoFlecha'
-import CardProyectos from '../components/cardProyectos/cardProyectos'
+import CardProyectos from '../components/cardProyectos/CardProyectos'
+import Skills from '../components/skills/Skills'
+
 
 const Home = () => {
     return (
@@ -47,13 +48,14 @@ const Home = () => {
             <main className='container-main'>
                 <section className="container-proyectos" id='proyectos'>
                     <h2>Proyectos</h2>
-                    <section style={{ display: 'flex', justifyContent: 'center', gap: 40 }} className='container-proyectos-items'>
-
+                    <section style={{ display: 'flex', justifyContent: 'center', gap: 40, flexWrap: "wrap" }} className='container-proyectos-items'>
 
                         <CardProyectos />
 
                     </section>
                 </section>
+
+                <Skills />
             </main>
             <DockNavbar />
 

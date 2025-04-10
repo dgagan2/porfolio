@@ -1,5 +1,6 @@
 .dock__navbar {
     position: fixed;
+    z-index: 10;
     width: 85%;
     left: 50%;
     bottom: 15px;
