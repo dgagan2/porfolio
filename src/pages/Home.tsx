@@ -3,10 +3,10 @@ import gitHubIcon from '../assets/icons/github.png'
 import linkedinIcon from '../assets/icons/linkedin.png'
 import DockNavbar from '../components/navbar/DockNavbar'
 import { motion } from 'framer-motion'
-import "../css/home.css"
 import IconoFlecha from '../components/iconoFlecha/IconoFlecha'
 import CardProyectos from '../components/cardProyectos/CardProyectos'
 import Skills from '../components/skills/Skills'
+import "../css/home.css"
 
 
 const Home = () => {
@@ -48,7 +48,7 @@ const Home = () => {
             <main className='container-main'>
                 <section className="container-proyectos" id='proyectos'>
                     <h2>Proyectos</h2>
-                    <section style={{ display: 'flex', justifyContent: 'center', gap: 40, flexWrap: "wrap" }} className='container-proyectos-items'>
+                    <section style={{ display: 'flex', justifyContent: 'center', gap: 40, flexWrap: "wrap", alignItems: "center" }} className='container-proyectos-items'>
 
                         <CardProyectos />
 
