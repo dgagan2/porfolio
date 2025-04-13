@@ -39,11 +39,60 @@
     text-align: center;
     font-size: 14px;
     color: white;
-    /* si tienes fondo oscuro */
 }
 
 .list-skills span {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.rainbow-border {
+    position: relative;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: border 0.3s ease;
+    padding: 8px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.rainbow-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    padding: 2px;
+    background: linear-gradient(70deg,
+            #141e30,
+            rgb(251, 249, 249),
+            #141e30,
+            rgb(207, 207, 207),
+            #141e30);
+    background-size: 300% 300%;
+    animation: spin-rainbow 4s linear infinite;
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.rainbow-border:hover::before {
+    opacity: 1;
+}
+
+@keyframes spin-rainbow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
 }

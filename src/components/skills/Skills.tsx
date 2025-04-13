@@ -38,7 +38,7 @@ const Skills = () => {
                 <div className='container-habilidades-items-list'>
                     <ul className="list-skills">
                         {skillsData.map(({ name, icon }) => (
-                            <li key={name}>
+                            <li key={name} className="rainbow-border">
                                 <span>
                                     <img src={icon} alt={`Logo de ${name}`} />
                                     <p className="skill-description">{name}</p>
